@@ -14,7 +14,7 @@ const Home = () => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`https://your-vercel-project-url/api/items/${id}`, {
+      const res = await fetch(`https://vercel.com/ethan-gulledges-projects/mini-project3/api/items/${id}`, {
         method: 'DELETE',
       });
       if (res.ok) {
