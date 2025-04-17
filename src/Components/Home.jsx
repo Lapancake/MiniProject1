@@ -6,7 +6,7 @@ const Home = () => {
   const isAdmin = sessionStorage.getItem('isAdmin') === 'true';
 
   useEffect(() => {
-    fetch('https://your-vercel-project-url/api/items')
+    fetch('https://lab3-express-server.vercel.app/api/items')
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch((err) => console.error('Error fetching items:', err));
@@ -14,7 +14,7 @@ const Home = () => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`https://vercel.com/ethan-gulledges-projects/mini-project3/api/items/${id}`, {
+      const res = await fetch(`https://lab3-express-server.vercel.app/api/items/${id}`, {
         method: 'DELETE',
       });
       if (res.ok) {
